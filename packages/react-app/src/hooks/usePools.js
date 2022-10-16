@@ -31,13 +31,15 @@ export const usePools = () => {
   update the state variable. */
   const [pools, setPools] = useState({});
 
-  /* A hook that is called when the component is mounted. */
+  /* A React hook that is called when the component is mounted. It is also called when the
+  component is updated. */
   useEffect(() => {
-    loadPools(readOnlyUrls(readOnlyChainId)).then((pools) => {
-      setPools(pools);
-      setLoading(false);
-    });
-  }, [readOnlyChainId, readOnlyUrls]);
+    loadPools(readOnlyUrls[readOnlyChainId])
+      .then((pools) => {
+        setPools(pools);
+        setLoading(false);
+      });
+  }, [readOnlyUrls, readOnlyChainId]);
 
   /* Returning an array of two values. */
   return [loading, pools];

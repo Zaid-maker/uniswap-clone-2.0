@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Contract } from "@ethersproject/contracts";
 import { abis } from "@my-app/contracts";
@@ -13,7 +14,7 @@ import { parseUnits } from "ethers/lib/utils";
 
 import { ROUTER_ADDRESS } from '../config'
 
-const Exchange = () => {
+const Exchange = ({ pools }) => {
   return <div>Exchange</div>;
 };
 
