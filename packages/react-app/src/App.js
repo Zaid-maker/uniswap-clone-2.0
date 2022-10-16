@@ -9,8 +9,7 @@ import { Loader, Exchange, WalletButton } from './components'
 const App = () => {
   /* It's a custom hook that returns the current account. */
   const { account } = useEthers();
-
-  const poolIsLoading = false;
+  const [loading, pools] = usePools()
 
   return (
     <div className={styles.container}>
@@ -33,10 +32,10 @@ const App = () => {
               <div className="pink_gradient" />
               <div className={styles.exchange}>
                 {account ? (
-                  poolIsLoading ? (
+                  loading ? (
                     <Loader title="Loading Pools, please wait!" />
                   ) : (
-                    <Exchange />
+                    <Exchange pools={pools} />
                   )
                 ) : (
                   <Loader title="Please connect your wallet" />
