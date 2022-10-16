@@ -49,5 +49,6 @@
     "ipfs": "yarn build && ipfs-deploy build/",
     "start": "react-scripts start",
     "test": "react-scripts test"
-  }
+  },
+  "license": "MIT"
 }
