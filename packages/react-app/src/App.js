@@ -1,15 +1,15 @@
 import React from "react";
 import { useEthers } from "@usedapp/core";
 
-import { usePools } from './hooks';
+import { usePools } from "./hooks";
 import styles from "./styles";
 import { uniswapLogo } from "./assets";
-import { Loader, Exchange, WalletButton } from './components'
+import { Loader, Exchange, WalletButton } from "./components";
 
 const App = () => {
   /* It's a custom hook that returns the current account. */
   const { account } = useEthers();
-  const [loading, pools] = usePools()
+  const [poolsLoading, pools] = usePools();
 
   return (
     <div className={styles.container}>
@@ -17,7 +17,7 @@ const App = () => {
         <header className={styles.header}>
           <img
             src={uniswapLogo}
-            alt="uniswap logo"
+            alt="uniswap-logo"
             className="w-16 h-16 object-contain"
           />
           <WalletButton />
@@ -32,8 +32,8 @@ const App = () => {
               <div className="pink_gradient" />
               <div className={styles.exchange}>
                 {account ? (
-                  loading ? (
-                    <Loader title="Loading Pools, please wait!" />
+                  poolsLoading ? (
+                    <Loader title="Loading pools, please wait!" />
                   ) : (
                     <Exchange pools={pools} />
                   )
