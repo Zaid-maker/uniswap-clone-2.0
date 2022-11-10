@@ -3353,10 +3353,10 @@
     "@uniswap/lib" "1.1.1"
     "@uniswap/v2-core" "1.0.0"
 
-"@usedapp/core@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@usedapp/core/-/core-1.1.5.tgz"
-  integrity sha512-goX1/uqlUGhio5fO3Uhjxe4gLde9ZkwGSdSaSfUGfrsDO5tyKgLK9Tlw0BF/Dj9Dh+NrKrhus/i2dNkpbbbktA==
+"@usedapp/core@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@usedapp/core/-/core-1.2.2.tgz#b74d617421a9c91a9e6d6d29ce115b434aadd426"
+  integrity sha512-+YbsFUer5ejQMxwlOJm5/6SAxPdtYMCHaZL1RhKRVPLiliGBGvRKO1ew2eWAkzRtWUnH8fAlBOdukzPVr8tsrg==
   dependencies:
     "@metamask/detect-provider" "^1.2.0"
     "@uniswap/token-lists" "^1.0.0-beta.27"
